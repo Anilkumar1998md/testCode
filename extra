@@ -1,0 +1,49 @@
+List of city- done
+list of restaurent - done
+list of cuisine- done
+list of mealtype -done
+Post the order
+Get All Orders - done
+
+///////////////////////////////
+Rest on the basis of city -done (http://localhost:7800/restaurents?city=1)
+Rest on the basis of meal type -done  (http://localhost:7800/restaurents?mealtype=1)
+Rest details-done  (http://localhost:7800/restaurantdetails/3)
+Rest on the basis of cuisine and mealtype (http://localhost:7800/restaurantList/3?cuisine=1)
+Rest on the basis of cost  and mealtype (http://localhost:7800/restaurantList/5?lcost=500&hcost=1000)
+Rest on the basis of city  and mealtype - done (http://localhost:7800/restaurantList/3?city=1)
+
+npm i express cors mongodb body-parser
+
+cross origin resource sharing
+
+
+db.restaurent.find({"city":"6"})
+
+db.restaurent.find({"type.mealtype":1})
+
+db.restaurent.find({"type.mealtype":"1","Cuisine.cuisine":"1"}).pretty()
+
+db.restaurent.find({cost:{$lt:1000,$gt:650}}).pretty()
+
+{ 'type.mealtype': '1', cost: { '$lt': 1000, '$gt': 650 } }
+
+
+db.orders.remove({_id:1})
+
+db.orders.update({_id:1},
+{
+    $set:{
+        name:req.body.name,
+        address:req.body.name 
+    }
+})
+
+
+db.orders.update({_id:2},
+{
+    $set:{
+        name:'Alvin',
+        address:'My address'
+    }
+})
