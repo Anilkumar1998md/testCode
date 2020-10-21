@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-var port = 7800;
+var port =  process.env.PORT || 7800;
 var bodParser = require('body-parser');
 var mongo = require('mongodb');
 var MongoClient = mongo.MongoClient
